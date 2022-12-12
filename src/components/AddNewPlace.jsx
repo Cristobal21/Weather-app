@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export const AddNewPlace = ({ onNewPlace }) => {
 	const [inputValue, setInputValue] = useState("")
 
@@ -7,25 +9,25 @@ export const AddNewPlace = ({ onNewPlace }) => {
 
 	const onSubmit = (e) => {
 		e.preventDefault()
-		if (inputValue.trim().length >= 1) return
+		if (inputValue.trim().length <= 1) return
 		onNewPlace(inputValue.trim())
-		setInputValue("")
 	}
 
 	return (
-		<div className="flex justify-center">
+		<div className="flex items-center flex-col">
 			<form onSubmit={onSubmit} className="my-10">
-				<label htmlFor="buscador"></label>
 				<input
 					type="text"
 					name="buscador"
 					id="buscador"
 					value={inputValue}
 					onChange={onInputChange}
-					placeholder="Busca un lugar"
-					className="w-96 px-3 py-3 rounded-md text-center mx-auto"
+					placeholder="Busca un lugar de latinoamérica"
+					autoComplete="off"
+					className="w-96 px-3 py-3 rounded-md text-center mx-auto form-control"
 				/>
 			</form>
+			<p className="font-extralight text-sm">{`Resultados relacionados con ${inputValue}`}</p>
 		</div>
 	)
 }

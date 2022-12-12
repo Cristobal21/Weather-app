@@ -1,24 +1,23 @@
 import { useState } from "react"
+import { AddNewPlace } from "../components/AddNewPlace"
+import { PlaceGrid } from "../components/PlaceGrid"
 
-export const Home = () => {
-	
-	const [lugares, setLugares] = useState(["Londres"])
+function Home() {
+	const [lugares, setLugares] = useState(["buin"])
 
-	const onAddPlace = ( newPlace ) => {
-		setLugares([ newPlace ])
+	const onAddPlace = (newPlace) => {
+		setLugares([newPlace])
 	}
 
 	return (
 		<>
-			<Home
-				onNewPlace = { onAddPlace }
-			/>
+			<AddNewPlace onNewPlace={onAddPlace} />
 
-			{
-				lugares.map( (lugar) => (
-
-				))
-			}
+			{lugares.map((lugar) => (
+				<PlaceGrid key={lugar} lugar={lugar} />
+			))}
 		</>
 	)
 }
+
+export default Home

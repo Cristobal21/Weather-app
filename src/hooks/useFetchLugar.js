@@ -13,8 +13,6 @@ export const useFetchLugar = (lugar) => {
 		obtenerLugar()
 	}, [])
 
-	console.log(lugares)
-
 	return {
 		lugares,
 	}
