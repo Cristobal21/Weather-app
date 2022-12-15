@@ -3,7 +3,7 @@ import { AddNewPlace } from "../components/AddNewPlace"
 import { PlaceGrid } from "../components/PlaceGrid"
 
 function Home() {
-	const [lugares, setLugares] = useState(["buin"])
+	const [lugares, setLugares] = useState([""])
 
 	const onAddPlace = (newPlace) => {
 		setLugares([newPlace])
