@@ -26,7 +26,7 @@ export const AddNewPlace = ({ onNewPlace }) => {
 					onChange={onInputChange}
 					placeholder="Busca un lugar de latinoamérica"
 					autoComplete="off"
-					className="w-96 px-3 py-3 rounded-md border border-indigo-400 text-center mx-auto shadow-sm form-control"
+					className="w-96 px-4 py-4 rounded-md text-lg text-center mx-auto shadow form-control focus:outline-none"
 				/>
 			</form>
 			{result ? (

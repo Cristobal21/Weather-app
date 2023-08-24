@@ -6,7 +6,7 @@ export const PlaceGrid = ({ lugar }) => {
 
 	return (
 		<>
-			<div className="flex flex-col items-center mb-8 md:grid md:grid-cols-2 md:place-items-center lg:mx-36 min-[1650px]:mx-60 2xl:grid-cols-3 gap-4">
+			<div className="grid grid-cols-4 grid-flow-row gap-4 mx-10 py-10 h-full">
 				{lugares.map((data) => (
 					<PlaceItem key={data.id} {...data} />
 				))}

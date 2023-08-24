@@ -4,14 +4,18 @@ import { getLugar } from "../helpers/getLugar"
 export const useFetchLugar = (lugar) => {
 	const [lugares, setLugares] = useState([])
 
-	const obtenerLugar = async () => {
-		const nuevosLugares = await getLugar(lugar)
-		setLugares(nuevosLugares)
+	try {
+		const obtenerLugar = async () => {
+			const nuevosLugares = await getLugar(lugar)
+			setLugares(nuevosLugares)
+		}
+	
+		useEffect(() => {
+			obtenerLugar()
+		}, [])
+	} catch (error) {
+		console.log('Error en el servidor: ', error)
 	}
-
-	useEffect(() => {
-		obtenerLugar()
-	}, [])
 
 	return {
 		lugares,

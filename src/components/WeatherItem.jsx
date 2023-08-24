@@ -8,45 +8,45 @@ export const WeatherItem = () => {
 	const { data } = clima
 
 	return (
-		<div>
+		<>
 			{data?.map((info) => (
-				<div key={info.id}>
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Estado clima:`}</p>
-						<p>{info.descripcion.toUpperCase()}</p>
+				<div key={info.id} className="w-full h-full [&>div]:flex [&>div]:gap-x-2 [&>div>p]:text-lg">
+					<div className="">
+						<p className="text-indigo-400">{`Estado clima:`}</p>
+						<p className="capitalize">{info.descripcion}</p>
 					</div>
 
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Humedad ambiente:`}</p>
+					<div className="">
+						<p className="text-indigo-400">{`Humedad ambiente:`}</p>
 						<p>{info.humedad}</p>
 					</div>
 
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Temperatura actual:`}</p>
+					<div className="">
+						<p className="text-indigo-400">{`Temperatura actual:`}</p>
 						<p>{info.actual}</p>
 					</div>
 
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Temperatura Mínima:`}</p>
+					<div className="">
+						<p className="text-indigo-400">{`Temperatura Mínima:`}</p>
 						<p>{info.minima}</p>
 					</div>
 
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Temperatura Máxima:`}</p>
+					<div className="">
+						<p className="text-indigo-400">{`Temperatura Máxima:`}</p>
 						<p>{info.maxima}</p>
 					</div>
 
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Velocidad del viento:`}</p>
+					<div className="">
+						<p className="text-indigo-400">{`Velocidad del viento:`}</p>
 						<p>{info.viento}</p>
 					</div>
 
-					<div className="flex gap-2">
-						<p className="text-md text-indigo-400">{`Visibilidad actual:`}</p>
+					<div className="">
+						<p className="text-indigo-400">{`Visibilidad actual:`}</p>
 						<p>{info.visibilidad}</p>
 					</div>
 				</div>
 			))}
-		</div>
+		</>
 	)
 }

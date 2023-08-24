@@ -17,18 +17,18 @@ export const PlaceItem = ({ name, title, country, cordinates, id }) => {
 	}
 
 	return (
-		<div>
+		<>
 			{!click ? (
 				<div
 					onClick={handleClick1}
-					className="bg-white border border-indigo-100 shadow-md rounded-lg w-96 px-5 py-5 mt-5 hover:bg-slate-200 hover:cursor-pointer"
+					className="bg-white shadow rounded-lg w-full h-60 px-5 py-5 hover:bg-slate-200 hover:cursor-pointer active:scale-[.98] transition-all"
 				>
 					<p className="text-right font-thin text-xs px-2">{country}</p>
-					<p className="text-center text-lg text-indigo-500 font-bold px-5 pb-3">
+					<p className="text-center text-xl text-indigo-500 font-bold px-5 pb-3">
 						{title}
 					</p>
 					<p className="font-normal">{name}</p>
-					<div className="flex justify-center gap-6 mt-2">
+					<div className="flex justify-center gap-6 pt-4">
 						<p className="font-light text-indigo-500">{`Lat: ${lat}`}</p>
 						<p className="font-light text-indigo-500">{`Lng: ${lng}`}</p>
 					</div>
@@ -36,11 +36,11 @@ export const PlaceItem = ({ name, title, country, cordinates, id }) => {
 			) : (
 				<div
 					onClick={handleClick2}
-					className="bg-white border border-indigo-100 shadow-md rounded-lg w-96 px-5 py-5 mt-5 hover:bg-slate-200 hover:cursor-pointer"
+					className="bg-white shadow rounded-lg w-full h-full px-5 py-5 hover:bg-slate-200 hover:cursor-pointer active:scale-[.98] transition-all"
 				>
 					<WeatherItem />
 				</div>
 			)}
-		</div>
+		</>
 	)
 }
