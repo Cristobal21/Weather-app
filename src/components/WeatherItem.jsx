@@ -18,32 +18,32 @@ export const WeatherItem = () => {
 
 					<div className="">
 						<p className="text-indigo-400">{`Humedad ambiente:`}</p>
-						<p>{info.humedad}</p>
+						<p>{`${info.humedad}%`}</p>
 					</div>
 
 					<div className="">
 						<p className="text-indigo-400">{`Temperatura actual:`}</p>
-						<p>{info.actual}</p>
+						<p>{`${info.actual}°`}</p>
 					</div>
 
 					<div className="">
 						<p className="text-indigo-400">{`Temperatura Mínima:`}</p>
-						<p>{info.minima}</p>
+						<p>{`${info.minima}°`}</p>
 					</div>
 
 					<div className="">
 						<p className="text-indigo-400">{`Temperatura Máxima:`}</p>
-						<p>{info.maxima}</p>
+						<p>{`${info.maxima}°`}</p>
 					</div>
 
 					<div className="">
 						<p className="text-indigo-400">{`Velocidad del viento:`}</p>
-						<p>{info.viento}</p>
+						<p>{`${info.viento} k/m`}</p>
 					</div>
 
 					<div className="">
 						<p className="text-indigo-400">{`Visibilidad actual:`}</p>
-						<p>{info.visibilidad}</p>
+						<p>{`${info.visibilidad} mts`}</p>
 					</div>
 				</div>
 			))}
